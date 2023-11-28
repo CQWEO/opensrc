@@ -41,28 +41,28 @@ local Rayfield = loadstring(game:HttpGet(RayfieldURL))()
 
 
 local Window = Rayfield:CreateWindow({
-   Name = "Blade Ball",
-   LoadingTitle = "Inferno Scripts",
-   LoadingSubtitle = "by InfernoKarl",
+   Name = "YOU HUB | v1.5",
+   LoadingTitle = "Rechedmcvn Credit To Script",
+   LoadingSubtitle = "",
    ConfigurationSaving = {
       Enabled = false,
-      FolderName = "Inferno Scripts",
-      FileName = "Inferno Scripts"
+      FolderName = "Rechedmcvn Credit To Script",
+      FileName = "Rechedmcvn Credit To Script"
    },
    Discord = {
-      Enabled = true,
-      Invite = "hNX8VxcjMF",
+      Enabled = false,
+      Invite = "LOL!",
       RememberJoins = true
    },
-   KeySystem = false,
+   KeySystem = true,
    KeySettings = {
       Title = "Inferno Scripts",
       Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/hNX8VxcjMF)",
-      FileName = "InfernoKey",
+      Note = "Key In Discord",
+      FileName = "KeySystem",
       SaveKey = true,
       GrabKeyFromSite = false,
-      Key = "Hello"
+      Key = "Rechedmcn_lol2571018221011111"
    }
 })
 
@@ -268,7 +268,7 @@ local AutoParryToggle = AutoParry:CreateToggle({
 
 
 local AutoRagingDeflect = AutoParry:CreateToggle({
-    Name = "Auto Rage Parry/Rapture Parry (MUST EQUIP PROPER ABILITY)",
+    Name = "Auto Rage Parry/Rapture Parry",
     CurrentValue = false,
     Flag = "AutoRagingDeflectFlag",
     Callback = function(Value)
@@ -288,8 +288,8 @@ local AutoRagingDeflect = AutoParry:CreateToggle({
 
 local CloseFighting = AutoParry:CreateSection("Close Fighting")
  local SpamParry = AutoParry:CreateKeybind({
-    Name = "Spam Parry (Hold)",
-    CurrentKeybind = "C",
+    Name = "Spam Parry (Hold Keybind)",
+    CurrentKeybind = "F",
     HoldToInteract = true,
     Flag = "ToggleParrySpam", 
     Callback = function(Keybind)
@@ -382,7 +382,7 @@ local AutoResponseToggle = AutoParry:CreateToggle({
 })
 
 local notifyparriedthing = AutoParry:CreateButton({
-    Name = "Enable/Disable Notify when parried",
+    Name = "Enable Notify",
     Callback = function()
         if not notifyparried == true then
             notifyparried = true
