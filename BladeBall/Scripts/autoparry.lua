@@ -1,60 +1,32 @@
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield")()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local workspace = game:GetService("Workspace")
 local players = game:GetService("Players")
-local replicatedStorage = game:GetService("ReplicatedStorage")
 local localPlayer = players.LocalPlayer
-local BASE_THRESHOLD = 0.2
-local VELOCITY_SCALING_FACTOR_FAST = 0.050
-local VELOCITY_SCALING_FACTOR_SLOW = 0.1
-local IMMEDIATE_PARRY_DISTANCE = 15
-local IMMEDIATE_HIGH_VELOCITY_THRESHOLD = 85
 local UserInputService = game:GetService("UserInputService")
-local responses = {"lol what", "??", "wdym", "bru what", "mad cuz bad", "skill issue", "cry"}
-local gameEndResponses = {"ggs", "gg :3", "good game", "ggs yall", "wp", "ggs man"}
-local keywords = {"auto parry", "auto", "cheating", "hacking"}
+local replicatedStorage = game:GetService("ReplicatedStorage")
 local heartbeatConnection
-local focusedBall, displayBall = nil, nil
-local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
-local ballsFolder = workspace:WaitForChild("Balls")
-local parryButtonPress = replicatedStorage.Remotes.ParryButtonPress
-local abilityButtonPress = replicatedStorage.Remotes.AbilityButtonPress
-local sliderValue = 20
-local distanceVisualizer = nil
-local isRunning = false
-local notifyparried = false
-local PlayerGui = localPlayer:WaitForChild("PlayerGui")
-local Hotbar = PlayerGui:WaitForChild("Hotbar")
-local UseRage = false
-
-local uigrad1 = Hotbar.Block.border1.UIGradient
-local uigrad2 = Hotbar.Ability.border2.UIGradient
-
-
-local function isPlayerOnMobile()
-    return UserInputService.TouchEnabled and not (UserInputService.KeyboardEnabled or UserInputService.GamepadEnabled)
-end
 
 local Window = Rayfield:CreateWindow({
-   Name = "YOU HUB | v1.5",
-   LoadingTitle = "Rechedmcvn Credit To Script",
-   LoadingSubtitle = "",
+   Name = "You Hub",
+   LoadingTitle = "Scripts",
+   LoadingSubtitle = "Scripts,
    ConfigurationSaving = {
       Enabled = false,
-      FolderName = "Rechedmcvn Credit To Script",
-      FileName = "Rechedmcvn Credit To Script"
+      FolderName = "Scripts",
+      FileName = "Scripts"
    },
    Discord = {
-      Enabled = false,
-      Invite = "LOL!",
+      Enabled = true,
+      Invite = "hNX8VxcjMF",
       RememberJoins = true
    },
    KeySystem = true,
    KeySettings = {
-      Title = "Inferno Scripts",
+      Title = "Scripts",
       Subtitle = "Key System",
-      Note = "Key In Discord",
-      FileName = "KeySystem",
+      Note = "Join the discord (discord.gg/hNX8VxcjMF)",
+      FileName = "Key",
       SaveKey = true,
       GrabKeyFromSite = false,
       Key = "Rechedmcn_lol2571018221011111"
