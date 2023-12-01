@@ -1,3 +1,5 @@
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield")()
+
 local workspace = game:GetService("Workspace")
 local players = game:GetService("Players")
 local replicatedStorage = game:GetService("ReplicatedStorage")
@@ -32,13 +34,6 @@ local uigrad2 = Hotbar.Ability.border2.UIGradient
 local function isPlayerOnMobile()
     return UserInputService.TouchEnabled and not (UserInputService.KeyboardEnabled or UserInputService.GamepadEnabled)
 end
-
-local RayfieldURL = isPlayerOnMobile() and 
-                    'https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library' or 
-                    'https://sirius.menu/rayfield'
-
-local Rayfield = loadstring(game:HttpGet(RayfieldURL))()
-
 
 local Window = Rayfield:CreateWindow({
    Name = "YOU HUB | v1.5",
